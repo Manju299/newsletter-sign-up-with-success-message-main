@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Overpass&family=Poppins:ital@0;1&family=Roboto:wght@400;700&display=swap');
+
+
+:root{
+    --clr-primary: hsl(234, 29%, 20%);
+    --clr-secondary: hsl(235, 18%, 26%);
+
+    --clr-nuetral:hsl(0, 0%, 100%);
+    --clr-sec-nuetral:hsl(231, 7%, 60%);
+
+    --clr-active:hsl(4, 100%, 67%);
+
+    --font-700: 48px;
+    --font-400: 16px;
+    --font-200:11px;
+    --font-fm: 'Roboto', sans-serif;
+    
+}
+
+body{
+    background-color: var(--clr-secondary);
+    font-family: var(--font-fm);
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    max-width: 900px;
+    background-color: var(--clr-nuetral);
+    padding: 2rem;
+    border-radius: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%)translateY(-50%);
+    flex-wrap: wrap-reverse;
+    
+}
+.content-side{
+    padding: 3rem;
+}
+
+span{
+    font-size: var(--font-700);
+    font-weight: 700;
+}
+p img{
+    color: var(--clr-secondary);
+}
+
+.line > p {
+    display: inline ;
+    flex-direction: column  ;
+}
+.success{
+    width: 22px;
+    height: 22px;
+    
+}
+form{
+    display: flex; 
+    flex-direction: column;
+    /* margin: 1rem;   */
+}
+
+form > *{
+    margin-top: 10px;
+} 
+input{
+    padding:10px;
+    border-radius: 5px;
+    border:  1px solid var(--clr-sec-nuetral);
+    outline: none;
+
+    
+}
+button{
+    background-color: var(--clr-primary);
+    color: var(--clr-nuetral);
+    border:none;
+    border-radius: 5px;
+}
+
+.image-side{
+    width: auto;
+}
+.check{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
