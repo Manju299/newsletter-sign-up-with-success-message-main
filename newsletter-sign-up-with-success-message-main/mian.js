@@ -1,5 +1,6 @@
 const email = document.getElementById("email");
 const btn = document.getElementById("button");
+const errormessage = document.querySelector(".error_message");
 
 function error(){
     email.style.borderColor = "rgba(255, 0, 0, 0.5)";
@@ -25,12 +26,14 @@ function validate(e){
     const emailReg  = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     if(!emailReg.test(email.value)){
          error();
+         errormessage.removeAttribute("hidden");
         // email.style.backgroundColor.opacity = 0.5;
         console.log("Not valid");
     }
     else{
         hide();
         console.log(" correct");
+        errormessage.setAttribute("hidden",true);
     }
 
 }

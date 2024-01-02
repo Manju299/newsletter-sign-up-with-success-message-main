@@ -108,6 +108,20 @@ label{
     padding-right: 10px;
 }
 
+.label_and_error{
+    display: inline-flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+.error_message{
+    margin: 0;
+    color:var(--clr-active);
+
+}
+
 
 @media screen and (max-width: 600px){
     main{
