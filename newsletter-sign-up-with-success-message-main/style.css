@@ -20,6 +20,8 @@
 body{
     background-color: var(--clr-secondary);
     font-family: var(--font-fm);
+    
+
 }
 
 main{
@@ -29,14 +31,17 @@ main{
     background-color: var(--clr-nuetral);
     padding: 2rem;
     border-radius: 2rem;
-    position: absolute;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translateX(-50%)translateY(-50%);
-    flex-wrap: wrap-reverse;
+    left: 50%; */
+    /* transform: translateX(-50%)translateY(-50%); */
+    /* flex-wrap: wrap-reverse; */
     
 }
 .content-side{
+    flex: 2;
     padding: 3rem;
 }
 
@@ -66,7 +71,7 @@ form{
 form > *{
     margin-top: 10px;
 } 
-input{
+input,button{
     padding:10px;
     border-radius: 5px;
     border:  1px solid var(--clr-sec-nuetral);
@@ -81,10 +86,34 @@ button{
     border-radius: 5px;
 }
 
-.image-side{
+.image-side > img{
     width: auto;
+}
+.image-side{
+    flex: 1
 }
 .check{
     margin-top: 30px;
     margin-bottom: 30px;
+}
+
+label{
+    font-size: 12px;
+}
+.line{
+    display: flex;
+    align-items: center;
+}
+.line > img {
+    padding-right: 10px;
+}
+
+
+@media screen and (max-width: 600px){
+    main{
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap-reverse;
+        
+    }
 }
