@@ -79,6 +79,11 @@ input,button{
 
     
 }
+input.error {
+    border: 1px solid rgba(255, 0, 0, 0.5);
+    background-color: rgba(255, 0, 0, 0.3);
+    color: rgba(255, 0, 0, 0.3);
+}
 button{
     background-color: var(--clr-primary);
     color: var(--clr-nuetral);
@@ -119,6 +124,7 @@ label{
 .error_message{
     margin: 0;
     color:var(--clr-active);
+    display: none;
 
 }
 
