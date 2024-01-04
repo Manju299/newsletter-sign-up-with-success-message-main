@@ -20,6 +20,10 @@
 body{
     background-color: var(--clr-secondary);
     font-family: var(--font-fm);
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
     
 
 }
@@ -72,10 +76,11 @@ form > *{
     margin-top: 10px;
 } 
 input,button{
-    padding:10px;
+    padding:15px;
     border-radius: 5px;
     border:  1px solid var(--clr-sec-nuetral);
     outline: none;
+    cursor: pointer;                    
 
     
 }
@@ -89,7 +94,16 @@ button{
     color: var(--clr-nuetral);
     border:none;
     border-radius: 5px;
+    
 }
+
+button:hover{
+    background: linear-gradient(90deg,hsl(348, 100%, 66%),var(--clr-active));
+    color: var(--clr-nuetral);
+    border:none;
+    border-radius: 5px;
+}
+
 
 .image-side > img{
     width: auto;
@@ -102,8 +116,10 @@ button{
     margin-bottom: 30px;
 }
 
-label{
+lable,.error_message{
     font-size: 12px;
+    /* font-size: 14px; */
+    font-weight: 600;
 }
 .line{
     display: flex;
@@ -128,12 +144,62 @@ label{
 
 }
 
+.valid-entry{
+   border-color: rgb(181, 181, 181);
+   background-color: white;
+   color:black;
+}
 
-@media screen and (max-width: 600px){
+main.hide{
+    display: none;
+}
+
+.Thanks-for-sub{
+    background-color: var(--clr-nuetral);
+    width: 400px;
+    padding: var(--font-700);
+    border-radius: var(--font-200);
+}
+
+.Thanks_text{
+    font-size: var(--font-700);
+    font-weight: 700;
+}
+.sub-email{
+    font-size:medium;
+}
+.dismiss-btn{
+    width: 100%;
+
+}
+
+
+@media screen and (max-width: 400px){
+    body{
+        padding: 0;
+        margin: 0;
+        display: block;
+      
+
+    }
+  
     main{
+        
         display: flex;
         flex-direction: column-reverse;
         flex-wrap: wrap-reverse;
+        /* max-width:auto; */
+        padding: 0;
+        border-radius: 0;
+        /* justify-content: center; */
+        /* align-items: center; */
+        background-color: var(--clr-nuetral);
         
+        
+    }
+    .image-side > img {
+        background-repeat: no-repeat;
+        width: 100%;
+        background: url("./assets/images/illustration-sign-up-mobile.svg");
     }
 }

@@ -1,6 +1,10 @@
 const email = document.getElementById("email");
 const btn = document.getElementById("button");
 const errormessage = document.querySelector(".error_message");
+const success = document.getElementsByClassName("Thanks-for-sub");
+const main = document.getElementsByTagName("main");
+const subemail = document.getElementsByClassName("sub-email");
+
 
 // function error(){
 //     email.style.borderColor = "rgba(255, 0, 0, 0.5)";
@@ -16,6 +20,15 @@ const errormessage = document.querySelector(".error_message");
 
 
 // }   
+function successfull(subscribedEmail){
+    success[0].removeAttribute("hidden");
+    main[0].style.display="none"
+    subemail[0].innerHTML = subscribedEmail;
+
+    
+
+
+}
 
 function validate(e){
     e.preventDefault();
@@ -23,17 +36,15 @@ function validate(e){
     if(!emailReg.test(email.value)){
         email.classList.add("error");
         errormessage.style.display="block";
-        //  error();
-        //  errormessage.removeAttribute("hidden");
-        // email.style.backgroundColor.opacity = 0.5;
         console.log("Not valid");
     }
     else{
         email.classList.remove("error");
         errormessage.style.display = 'none';
-        // hide();
+        email.classList.add("valid-entry");
         console.log(" correct");
-        // errormessage.setAttribute("hidden",true);
+        successfull(email.value)
+        
     }
 
 }

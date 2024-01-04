@@ -26,9 +26,6 @@
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
-      .error_message{
-
-      }
     </style>
   </head>
   <body>
@@ -44,15 +41,15 @@
               src="./assets/images/icon-success.svg"
               alt="Product discovery and building what matters "
             />
-           <p> Product discovery and building what matters</p>
+            <p>Product discovery and building what matters</p>
           </div>
-          <div class="line" >
+          <div class="line">
             <img
               class="success"
               src="./assets/images/icon-success.svg"
               alt="Measuring to ensure"
             />
-            <p> Measuring to ensure</p>
+            <p>Measuring to ensure</p>
           </div>
           <div class="line">
             <img
@@ -60,13 +57,21 @@
               src="./assets/images/icon-success.svg"
               alt="updates are a success And much more"
             />
-           <p> updates are a success And much more!</p>
+            <p>updates are a success And much more!</p>
           </div>
         </div>
         <form>
           <div class="label_and_error">
-          <lable>Email address</lable><p class="error_message">Valid email required</p></div>
-          <input type="text" id="email" class="email" placeholder="email@company.com" required/>
+            <lable>Email address</lable>
+            <p class="error_message">Valid email required</p>
+          </div>
+          <input
+            type="text"
+            id="email"
+            class="email"
+            placeholder="email@company.com"
+            required
+          />
           <button id="button" class="sub" type="submit">
             Subscribe to monthly newsletter
           </button>
@@ -83,9 +88,16 @@
 
     <!-- Success message start -->
     <div class="Thanks-for-sub" hidden>
-      Thanks for subscribing! A confirmation email has been sent to
-      ash@loremcompany.com. Please open it and click the button inside to
-      confirm your subscription. Dismiss message
+      <img src="./assets/images/icon-success.svg">
+      <div class="Thanks_text">Thanks for subscribing!</div>
+      <div>
+        <p>
+          A confirmation email has been sent to <span class="sub-email"></span>.
+          Please open it and click the button inside to confirm your
+          subscription.
+        </p>
+      </div>
+      <button id="dismiss" class="dismiss-btn" type="submit">Dismiss message</button>
     </div>
     <!-- Success message end -->
 
