@@ -4,30 +4,21 @@ const errormessage = document.querySelector(".error_message");
 const success = document.getElementsByClassName("Thanks-for-sub");
 const main = document.getElementsByTagName("main");
 const subemail = document.getElementsByClassName("sub-email");
+const dismiss = document.getElementById("dismiss");
 
 
-// function error(){
-//     email.style.borderColor = "rgba(255, 0, 0, 0.5)";
-//     email.style.backgroundColor="rgba(255, 0, 0, 0.3)";
-//     email.style.color="rgba(255, 0, 0, 0.5)"
-// }
-
-// function hide(){
-//     email.style.borderColor = "rgb(181, 181, 181)";
-//     email.style.backgroundColor="white";
-//     email.style.color="black";  
-//     // email.style.color="red"
-
-
-// }   
 function successfull(subscribedEmail){
     success[0].removeAttribute("hidden");
     main[0].style.display="none"
     subemail[0].innerHTML = subscribedEmail;
+     
+    // Added to return to the main page
+    dismiss.addEventListener("click",()=>{
+        success[0].setAttribute("hidden",true);
+        main[0].style.display="flex";
+        email.value ="";
 
-    
-
-
+    })
 }
 
 function validate(e){
@@ -48,7 +39,5 @@ function validate(e){
     }
 
 }
-
-
 
 btn.addEventListener("click", validate);
